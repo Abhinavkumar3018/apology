@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>For My Babba 💕 | With All My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Heart Canvas Background -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- ==================== LOGIN GATEWAY ==================== -->
+  <div id="loginOverlay" class="login-overlay">
+    <div class="login-card">
+      <div class="login-heart-badge">
+        <span class="lock-icon">🔒</span>
+        <span class="heart-pulse">💖</span>
+      </div>
+      <h1 class="login-title">For Babba's Eyes Only</h1>
+      <p class="login-subtitle">A secret space made with love, dedicated to the most special girl in the world.</p>
+      
+      <form id="loginForm" class="login-form" onsubmit="return false;">
+        <div class="input-wrapper">
+          <input 
+            type="password" 
+            id="passwordInput" 
+            placeholder="Enter the secret passcode..." 
+            autocomplete="off"
+            spellcheck="false"
+            required
+          >
+          <button type="button" id="togglePasswordBtn" class="toggle-password" title="Show/Hide Password" aria-label="Toggle password visibility">
+            👁️
+          </button>
+        </div>
+
+        <div id="loginFeedback" class="login-feedback"></div>
+
+        <button type="submit" id="unlockBtn" class="unlock-btn">
+          <span>Unlock My Heart</span>
+          <span class="btn-arrow">✨</span>
+        </button>
+
+        <button type="button" id="hintBtn" class="hint-btn">
+          Need a hint? 🥺
+        </button>
+      </form>
+      <div class="login-footer">
+        <p>Made especially for you with all my love ❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT (UNLOCKED) ==================== -->
+  <div id="mainContent" class="main-content hidden">
+    
+    <!-- Top Floating Navbar -->
+    <header class="top-nav">
+      <div class="nav-brand">
+        <span class="nav-logo">Babba's Safe Space</span>
+        <span class="nav-heart">🧸</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#letterSection">Letter</a>
+        <a href="#gallerySection">Gallery</a>
+        <a href="#reasonsSection">Reasons</a>
+        <a href="#couponsSection">Coupons</a>
+        <a href="#forgiveSection">Forgive Me?</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="musicToggleBtn" class="nav-btn music-btn" title="Toggle background melody">
+          <span id="musicIcon">🎵</span>
+          <span id="musicText">Music: On</span>
+        </button>
+        <button id="lockBtn" class="nav-btn lock-nav-btn" title="Lock Website">
+          🔒
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+      <div class="hero-glow"></div>
+      <div class="hero-badge">
+        <span>To the love of my life 💕</span>
+      </div>
+      <h1 class="hero-title">
+        I'm So Sorry, <span class="gradient-text">Babba</span>
+      </h1>
+      <p class="hero-subtitle">
+        My insecurities got in the way today, but my heart has never wavered for a single second. 
+        You mean the absolute universe to me, and I made this little corner of the internet 
+        just to remind you how precious and adored you are.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#letterSection" class="primary-btn pulse-glow">
+          Read My Letter 💌
+        </a>
+        <a href="#forgiveSection" class="secondary-btn">
+          Can We Make Up? 🥺
+        </a>
+      </div>
+
+      <div class="floating-petals-decor">
+        <span class="petal p1">🌸</span>
+        <span class="petal p2">✨</span>
+        <span class="petal p3">💖</span>
+        <span class="petal p4">🌷</span>
+        <span class="petal p5">✨</span>
+      </div>
+    </section>
+
+    <!-- Heartfelt Apology & Reassurance Letter -->
+    <section id="letterSection" class="section letter-section">
+      <div class="section-header">
+        <span class="section-tag">From My Soul</span>
+        <h2 class="section-title">An Honest Letter to You 💌</h2>
+        <p class="section-desc">Tap the sealed wax envelope to read what's truly on my heart.</p>
+      </div>
+
+      <div class="envelope-container" id="envelopeWrapper">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap" id="envelopeFlap">
+            <div class="wax-seal" id="waxSeal">
+              <span>B</span>
+            </div>
+          </div>
+          <div class="envelope-pocket"></div>
+          <div class="letter-paper" id="letterPaper">
+            <div class="letter-inner">
+              <div class="letter-stamp">❤️ For My Babba</div>
+              <h3 class="letter-greeting">My Dearest Babba,</h3>
+              
+              <p>
+                I am so deeply sorry for how things unfolded today. When my insecurities flare up, 
+                my mind starts playing tricks on me and overthinking everything. But I want to make one thing 
+                crystal clear: <strong>none of that is your fault.</strong>
+              </p>
+              
+              <p>
+                You are the most patient, beautiful, and genuine girl I have ever known. 
+                Sometimes, my fears kick in precisely because of how deeply I care about you and how terrified 
+                I am of ever losing the best thing in my life. But that is my battle to fight, and it is never fair 
+                for my worries to cast a shadow over your day or make you feel even a moment of doubt about us.
+              </p>
+
+              <div class="letter-highlight-box">
+                <p>
+                  "You are not just my girlfriend; you are my peace, my smile on gloomy days, 
+                  and the person who feels like home no matter where we are."
+                </p>
+              </div>
+
+              <p>
+                I promise to communicate with you with honesty instead of retreating into fear. 
+                I promise to listen to you, to cherish you, and to never stop putting in the effort to make you feel 
+                treasured, respected, and completely safe in my arms.
+              </p>
+
+              <p>
+                Thank you for being you, for bearing with my silly moments, and for filling my life with so much color. 
+                I love you more than words, websites, or anything in this world could ever capture.
+              </p>
+
+              <div class="letter-signature">
+                <span>Forever & always yours,</span>
+                <span class="handwritten-sig">Your Silly Boy ❤️</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="openLetterBtn" class="open-envelope-btn">
+          ✨ Click to Open Envelope ✨
+        </button>
+      </div>
+    </section>
+
+    <!-- Polaroid Photo Gallery -->
+    <section id="gallerySection" class="section gallery-section">
+      <div class="section-header">
+        <span class="section-tag">Treasured Memories</span>
+        <h2 class="section-title">My Favorite Views in the Universe 📸</h2>
+        <p class="section-desc">Look at how effortlessly gorgeous you are. Click any picture to send a shower of love!</p>
+      </div>
+
+      <div class="polaroid-grid">
+        <!-- Photo 1 -->
+        <div class="polaroid-card tilt-left" data-img="images/photo1.jpg" data-caption="The most gorgeous girl anywhere she goes ✨ (and that cute cat face sticker is iconic! 😂🐱)">
+          <div class="tape-strip"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="images/photo1.jpg" alt="Babba in white dress" loading="lazy">
+            <span class="heart-react-badge">❤️</span>
+          </div>
+          <div class="polaroid-caption">
+            <p>Stealing the spotlight effortlessly ✨</p>
+            <span class="caption-date">Pure Elegance & Cutest Cat energy 🐱</span>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="polaroid-card tilt-right" data-img="images/photo2.jpg" data-caption="Double trouble, double the cuteness! Those round glasses look impossibly adorable on you 👓🌸">
+          <div class="tape-strip"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="images/photo2.jpg" alt="Babba with glasses and pink shirt" loading="lazy">
+            <span class="heart-react-badge">💖</span>
+          </div>
+          <div class="polaroid-caption">
+            <p>My favorite aesthetic queen 🌸</p>
+            <span class="caption-date">Those glasses! Total heart-melter 🥺</span>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="polaroid-card tilt-straight" data-img="images/photo3.jpg" data-caption="Stunning in blue 💙 Effortless style, beauty, and grace from head to toe.">
+          <div class="tape-strip"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="images/photo3.jpg" alt="Babba mirror selfie in hallway" loading="lazy">
+            <span class="heart-react-badge">💙</span>
+          </div>
+          <div class="polaroid-caption">
+            <p>Graceful, stunning, irreplaceable 💙</p>
+            <span class="caption-date">How did I get this lucky? ✨</span>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="polaroid-card tilt-left-soft" data-img="images/photo4.jpg" data-caption="Sparkles, pink vibes, and pure sweetness ✨ Nobody rocks this look like you do!">
+          <div class="tape-strip"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="images/photo4.jpg" alt="Babba top aesthetic shot" loading="lazy">
+            <span class="heart-react-badge">✨</span>
+          </div>
+          <div class="polaroid-caption">
+            <p>Glitter & Pink Edition 🥤💖</p>
+            <span class="caption-date">Pure joy and iconic vibes ✨</span>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="polaroid-card tilt-right-soft" data-img="images/photo5.jpg" data-caption="That look right here... it makes my heart skip a beat every single time 🥺💍">
+          <div class="tape-strip"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="images/photo5.jpg" alt="Babba mirror selfie with cute pose" loading="lazy">
+            <span class="heart-react-badge">🥰</span>
+          </div>
+          <div class="polaroid-caption">
+            <p>My favorite face in existence 🥺</p>
+            <span class="caption-date">The cutest expression ever 💍</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why You Mean Everything To Me -->
+    <section id="reasonsSection" class="section reasons-section">
+      <div class="section-header">
+        <span class="section-tag">Countless Reasons</span>
+        <h2 class="section-title">Why You're My Whole World 🌍</h2>
+        <p class="section-desc">Tap each card to reveal what makes you so irreplaceable to me.</p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="reason-card" tabindex="0">
+          <div class="reason-icon">🧸</div>
+          <h3 class="reason-title">My Instant Calming Hug</h3>
+          <p class="reason-desc">No matter how chaotic the world feels or how stormy my mind gets, hearing your voice instantly settles my soul.</p>
+        </div>
+
+        <div class="reason-card" tabindex="0">
+          <div class="reason-icon">✨</div>
+          <h3 class="reason-title">Your Contagious Warmth</h3>
+          <p class="reason-desc">You light up every room you enter. Your kindness, humor, and natural glow make people around you feel happy.</p>
+        </div>
+
+        <div class="reason-card" tabindex="0">
+          <div class="reason-icon">🌸</div>
+          <h3 class="reason-title">Unmatched Cutest Laugh</h3>
+          <p class="reason-desc">When you genuinely giggle or tease me, it’s my absolute favorite sound in the world. I live to hear it.</p>
+        </div>
+
+        <div class="reason-card" tabindex="0">
+          <div class="reason-icon">☕</div>
+          <h3 class="reason-title">The Sweetest Little Quirks</h3>
+          <p class="reason-desc">The way you sip your favorite drinks, pose for photos, or get excited over little things—every detail is adorable.</p>
+        </div>
+
+        <div class="reason-card" tabindex="0">
+          <div class="reason-icon">💎</div>
+          <h3 class="reason-title">Inside-and-Out Beauty</h3>
+          <p class="reason-desc">You are drop-dead gorgeous on the outside, but your gentle, generous heart is what truly mesmerizes me every day.</p>
+        </div>
+
+        <div class="reason-card" tabindex="0">
+          <div class="reason-icon">🏡</div>
+          <h3 class="reason-title">You Feel Like Home</h3>
+          <p class="reason-desc">With you, I don't need to put on a mask. You are my safe space, my comfort person, and my greatest blessing.</p>
+        </div>
+      </div>
+
+      <!-- Interactive Sweet Note Jar -->
+      <div class="notes-jar-wrapper">
+        <div class="jar-card">
+          <div class="jar-header">
+            <span class="jar-icon">🍯</span>
+            <div class="jar-texts">
+              <h3>Babba's Sweet Little Jar of Love</h3>
+              <p>Reach in anytime you need a reminder of how cherished you are.</p>
+            </div>
+          </div>
+          
+          <div class="jar-display" id="jarDisplay">
+            <p id="jarNoteText">"Click the button below to pick a sweet note folded just for you!"</p>
+          </div>
+
+          <button id="pickNoteBtn" class="pick-note-btn">
+            <span>Draw a Sweet Note 💌</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apology Peace-Offering Coupons -->
+    <section id="couponsSection" class="section coupons-section">
+      <div class="section-header">
+        <span class="section-tag">Peace Offerings</span>
+        <h2 class="section-title">Babba's Apology Vouchers 🎟️</h2>
+        <p class="section-desc">Valid forever. Redeem anytime simply by clicking or sending me a screenshot!</p>
+      </div>
+
+      <div class="coupons-grid">
+        <!-- Coupon 1 -->
+        <div class="coupon-card" data-coupon-id="c1">
+          <div class="coupon-cutout top"></div>
+          <div class="coupon-cutout bottom"></div>
+          <div class="coupon-badge">VOUCHER #01</div>
+          <div class="coupon-emoji">💆‍♀️</div>
+          <h3 class="coupon-title">Full Pampering Session</h3>
+          <p class="coupon-desc">Unlimited head scratches, back rubs, and shoulder massages with zero time limit.</p>
+          <button class="redeem-btn" onclick="redeemCoupon('c1', 'Full Pampering Session 💆‍♀️')">
+            Redeem Voucher
+          </button>
+        </div>
+
+        <!-- Coupon 2 -->
+        <div class="coupon-card" data-coupon-id="c2">
+          <div class="coupon-cutout top"></div>
+          <div class="coupon-cutout bottom"></div>
+          <div class="coupon-badge">VOUCHER #02</div>
+          <div class="coupon-emoji">🍨</div>
+          <h3 class="coupon-title">Late-Night Craving Run</h3>
+          <p class="coupon-desc">Ice cream, favorite dessert, snacks, or takeout of your choice delivered straight to you.</p>
+          <button class="redeem-btn" onclick="redeemCoupon('c2', 'Late-Night Craving Run 🍨')">
+            Redeem Voucher
+          </button>
+        </div>
+
+        <!-- Coupon 3 -->
+        <div class="coupon-card" data-coupon-id="c3">
+          <div class="coupon-cutout top"></div>
+          <div class="coupon-cutout bottom"></div>
+          <div class="coupon-badge">VOUCHER #03</div>
+          <div class="coupon-emoji">🏆</div>
+          <h3 class="coupon-title">You Win Any Debate Card</h3>
+          <p class="coupon-desc">Play this card at any moment and you immediately win 100% with no rebuttals allowed.</p>
+          <button class="redeem-btn" onclick="redeemCoupon('c3', 'You Win Any Debate Card 🏆')">
+            Redeem Voucher
+          </button>
+        </div>
+
+        <!-- Coupon 4 -->
+        <div class="coupon-card" data-coupon-id="c4">
+          <div class="coupon-cutout top"></div>
+          <div class="coupon-cutout bottom"></div>
+          <div class="coupon-badge">VOUCHER #04</div>
+          <div class="coupon-emoji">🍽️</div>
+          <h3 class="coupon-title">Dream Date of Your Choice</h3>
+          <p class="coupon-desc">Any restaurant, café, or activity you choose—fully planned, pampered, and my treat.</p>
+          <button class="redeem-btn" onclick="redeemCoupon('c4', 'Dream Date of Your Choice 🍽️')">
+            Redeem Voucher
+          </button>
+        </div>
+
+        <!-- Coupon 5 -->
+        <div class="coupon-card" data-coupon-id="c5">
+          <div class="coupon-cutout top"></div>
+          <div class="coupon-cutout bottom"></div>
+          <div class="coupon-badge">VOUCHER #05</div>
+          <div class="coupon-emoji">🫂</div>
+          <h3 class="coupon-title">100 Kisses & Cozy Hugs</h3>
+          <p class="coupon-desc">Redeemable whenever you need reassurance, warmth, cuddles, or just to be held tight.</p>
+          <button class="redeem-btn" onclick="redeemCoupon('c5', '100 Kisses & Cozy Hugs 🫂')">
+            Redeem Voucher
+          </button>
+        </div>
+
+        <!-- Coupon 6 -->
+        <div class="coupon-card" data-coupon-id="c6">
+          <div class="coupon-cutout top"></div>
+          <div class="coupon-cutout bottom"></div>
+          <div class="coupon-badge">VOUCHER #06</div>
+          <div class="coupon-emoji">🎬</div>
+          <h3 class="coupon-title">All-Night Movie / Show Binge</h3>
+          <p class="coupon-desc">You pick whatever show or movie you want, and I will happily watch every minute with snacks.</p>
+          <button class="redeem-btn" onclick="redeemCoupon('c6', 'All-Night Movie Binge 🎬')">
+            Redeem Voucher
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Forgive Me Section -->
+    <section id="forgiveSection" class="section forgive-section">
+      <div class="forgive-box">
+        <div class="forgive-emoji-avatar">
+          <span class="puppy-avatar" id="avatarEmoji">🥺👉👈</span>
+        </div>
+        <h2 class="forgive-title">Will You Forgive Your Silly Boy?</h2>
+        <p class="forgive-subtitle" id="forgiveSubtitle">
+          I promise to love you better, hold you closer, and never let my doubts hurt you again. 
+          What do you say, Babba?
+        </p>
+
+        <div class="forgive-buttons-area" id="forgiveArea">
+          <button id="yesBtn" class="forgive-btn yes-btn">
+            Yes, I forgive you! ❤️
+          </button>
+          <button id="noBtn" class="forgive-btn no-btn">
+            No 😤
+          </button>
+        </div>
+
+        <div class="hug-counter-card">
+          <p>Send me a virtual tight hug right now:</p>
+          <button id="sendHugBtn" class="send-hug-btn">
+            <span>Give Virtual Hug 🫂</span>
+            <span class="hug-count-pill" id="hugCount">0 Hugs Sent</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-heart-line">Handmade with infinite love, patience, and devotion for <strong>Babba</strong> 💕</p>
+        <p class="footer-subtext">You and me, always on the same team. No insecurity will ever beat our love.</p>
+        <div class="footer-mini-links">
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="scroll-top-btn">
+            Back to Top ⬆️
+          </button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <div class="lightbox-image-container">
+        <img id="lightboxImg" src="" alt="Enlarged photo of Babba">
+      </div>
+      <div class="lightbox-details">
+        <p id="lightboxCaption" class="lightbox-caption"></p>
+        <button id="showerHeartsBtn" class="shower-hearts-btn">
+          <span>Shower 100 Hearts on Babba 💕</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CELEBRATION MODAL ==================== -->
+  <div id="celebrationModal" class="celebration-modal">
+    <div class="celebration-card">
+      <div class="celebration-badge">🎉🥰💖</div>
+      <h2>YAAAY! I Love You So Much!</h2>
+      <p>
+        Thank you for your forgiving, gentle heart Babba! 🥺❤️<br>
+        You are truly the best thing that ever happened to me. 
+        I'm sprinting over with the biggest hugs and your favorite treats right now!
+      </p>
+      <div class="celebration-actions">
+        <button id="closeCelebrationBtn" class="primary-btn">
+          I Love You Too! 💋
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
